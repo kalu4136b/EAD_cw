@@ -629,12 +629,18 @@ public class Login extends javax.swing.JFrame {
         String name = txt_user_name.getText();
         String pw = txt_pw_login.getText();
         
+        if(name.isEmpty()||pw.isEmpty()){
+            
+            JOptionPane.showMessageDialog(rootPane, "Enter user name and password to login!");
+            
+        }else
         try
         {
            psmt = Con.prepareStatement("Select * from register WHERE user_name = ? AND password = ?");
            psmt.setString(1,name);
            psmt.setString(2, pw);
-           psmt.executeUpdate();
+           psmt.executeQuery();
+           JOptionPane.showMessageDialog(rootPane, "Success!");
            
         }catch(Exception e)
         {
