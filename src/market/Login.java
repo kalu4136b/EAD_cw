@@ -555,14 +555,15 @@ public class Login extends javax.swing.JFrame {
         
             String name = txt_name.getText();
             String psw = txt_pw.getText();
-            String pw = txt_pw_con.getText();
+            String pw = txt_pw_con.getText();//confirmation
             
+            //checking all fields are filled
              if (txt_name.getText().isEmpty() || txt_pw.getText().isEmpty()||txt_pw_con.getText().isEmpty()) {
                 
                  JOptionPane.showMessageDialog(null, "Fill all the Fields!", "Info", JOptionPane.INFORMATION_MESSAGE);
              
              }else{
-             
+             //check pw and pw confimations are equal 
              if (psw == null ? pw == null : psw.equals(pw))
             {
                 System.out.println("passwords are equal");
@@ -572,15 +573,25 @@ public class Login extends javax.swing.JFrame {
             }
             
             try{
-                
+                //customer table
                 psmt = Con.prepareStatement("Insert into register(user_name,password)values(?,?)");
                 psmt.setString(1, name);
                 psmt.setString(2,pw);
                 psmt.executeUpdate();
                 
-                
-                psmt = Con.prepareStatement("Create Table `" +name+ "`(name varchar(20) PRIMARY KEY,password text); ");
+                //kalhara
+                psmt = Con.prepareStatement("Create Table `" +name+ "`(name varchar(20) PRIMARY KEY,password text,cardName text,cardNumber int,cvc int); ");
                 psmt.executeUpdate();
+                System.out.println("done test 1");
+                
+                
+                psmt = Con.prepareStatement("Insert into `" +name+"`(name,password)values(?,?)");
+                psmt.setString(1, name);
+                psmt.setString(2,pw);
+                psmt.executeUpdate();
+                System.out.println("done test 2");
+                
+                //tabedpane tab index                
                 tabs.setSelectedIndex(3);
                 
                 
@@ -589,6 +600,7 @@ public class Login extends javax.swing.JFrame {
                } catch (SQLException ex) {
                 
                    JOptionPane.showMessageDialog(rootPane, ex);
+                   System.out.println(ex);
              
              }
             
@@ -617,7 +629,7 @@ public class Login extends javax.swing.JFrame {
         
             if(com_psw.equals(com_pw)){
         try{
-            
+            //company reg
              psmt=Con.prepareStatement("Insert into register_com(com_name,pw)values(?,?)");
              psmt.setString(1,com_name);
              psmt.setString(2, com_pw);
@@ -667,7 +679,7 @@ public class Login extends javax.swing.JFrame {
         try
         {
             if(service_provider_tgl.isSelected()){
-            
+            //company login
              psmt =  Con.prepareStatement("Select * from register_com WHERE com_name = ? AND pw = ?");
              psmt.setString(1, name);
              psmt.setString(2,pw);
@@ -686,6 +698,7 @@ public class Login extends javax.swing.JFrame {
              }
             
             }else{
+                //customer login
            psmt = Con.prepareStatement("Select * from register WHERE user_name = ? AND password = ?");
            psmt.setString(1,name);
            psmt.setString(2, pw);
@@ -749,7 +762,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.k33ptoo.components.KButton btn_reg10;
     private com.k33ptoo.components.KButton btn_reg11;
