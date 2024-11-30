@@ -7,13 +7,11 @@ package market;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.util.Vector;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.table.DefaultTableModel;
+import javax.swing.*;
+
+
 
 
 /**
@@ -27,6 +25,9 @@ public class Login extends javax.swing.JFrame {
     Connection Con;
     PreparedStatement psmt;
     
+   
+   
+    
 
     /**
      * Creates new form Login
@@ -38,7 +39,10 @@ public class Login extends javax.swing.JFrame {
        
 
     }
+    public JTextField getTextFiel(){
     
+        return txt_user_name;
+    }
     
     
     
@@ -71,7 +75,7 @@ public class Login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         btn_reg_cus = new com.k33ptoo.components.KButton();
         txt_name = new javax.swing.JTextField();
-        jPanel1 = new javax.swing.JPanel();
+        panel_login = new javax.swing.JPanel();
         txt_user_name = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -89,7 +93,7 @@ public class Login extends javax.swing.JFrame {
         txt_com_pw_con = new javax.swing.JPasswordField();
         btn_reg_com = new com.k33ptoo.components.KButton();
         btn_reg8 = new com.k33ptoo.components.KButton();
-        jPanel5 = new javax.swing.JPanel();
+        pannel_acc_type = new javax.swing.JPanel();
         btn_reg9 = new com.k33ptoo.components.KButton();
         btn_reg10 = new com.k33ptoo.components.KButton();
         jLabel11 = new javax.swing.JLabel();
@@ -255,17 +259,19 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(btn_reg_cus, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_reg5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(157, Short.MAX_VALUE))
+                .addContainerGap(197, Short.MAX_VALUE))
         );
 
         txt_name.getAccessibleContext().setAccessibleName("");
 
         tabs.addTab("tab2", pnl_register);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        panel_login.setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setText(" User Name");
 
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setText("Password");
 
         btn_reg12.setText("Login");
@@ -300,58 +306,58 @@ public class Login extends javax.swing.JFrame {
 
         service_provider_tgl.setForeground(new java.awt.Color(0, 161, 228));
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("I am Service provider");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(154, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout panel_loginLayout = new javax.swing.GroupLayout(panel_login);
+        panel_login.setLayout(panel_loginLayout);
+        panel_loginLayout.setHorizontalGroup(
+            panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_loginLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_pw_login, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel1)
+                        .addComponent(txt_user_name, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(panel_loginLayout.createSequentialGroup()
+                            .addGap(6, 6, 6)
+                            .addComponent(jLabel2))))
+                .addGap(64, 64, 64))
+            .addGroup(panel_loginLayout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_reg13, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_reg12, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(113, 113, 113))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txt_pw_login, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)
-                            .addComponent(txt_user_name, javax.swing.GroupLayout.DEFAULT_SIZE, 294, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
+                    .addComponent(btn_reg12, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panel_loginLayout.createSequentialGroup()
+                        .addComponent(jLabel5)
+                        .addGap(18, 18, 18)
                         .addComponent(service_provider_tgl, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(166, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_user_name, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_pw_login, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panel_loginLayout.setVerticalGroup(
+            panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_loginLayout.createSequentialGroup()
+                .addContainerGap(165, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txt_user_name, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txt_pw_login, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panel_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(service_provider_tgl, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(34, 34, 34)
+                .addGap(18, 18, 18)
                 .addComponent(btn_reg12, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_reg13, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(168, 168, 168))
+                .addGap(163, 163, 163))
         );
 
-        tabs.addTab("tab3", jPanel1);
+        tabs.addTab("tab3", panel_login);
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -431,12 +437,12 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(btn_reg_com, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btn_reg8, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addContainerGap(193, Short.MAX_VALUE))
         );
 
         tabs.addTab("tab4", jPanel4);
 
-        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        pannel_acc_type.setBackground(new java.awt.Color(255, 255, 255));
 
         btn_reg9.setText("As a Service provider/Company");
         btn_reg9.setkBackGroundColor(new java.awt.Color(0, 204, 204));
@@ -485,29 +491,30 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(100, 100, 100)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btn_reg11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btn_reg9, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(93, 93, 93))
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(164, 164, 164)
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btn_reg10, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(124, 124, 124))
+        javax.swing.GroupLayout pannel_acc_typeLayout = new javax.swing.GroupLayout(pannel_acc_type);
+        pannel_acc_type.setLayout(pannel_acc_typeLayout);
+        pannel_acc_typeLayout.setHorizontalGroup(
+            pannel_acc_typeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pannel_acc_typeLayout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addGroup(pannel_acc_typeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pannel_acc_typeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(btn_reg11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_reg9, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pannel_acc_typeLayout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pannel_acc_typeLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_reg10, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)))
+                .addGap(88, 88, 88))
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(183, Short.MAX_VALUE)
+        pannel_acc_typeLayout.setVerticalGroup(
+            pannel_acc_typeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pannel_acc_typeLayout.createSequentialGroup()
+                .addGap(190, 190, 190)
                 .addComponent(jLabel11)
                 .addGap(29, 29, 29)
                 .addComponent(btn_reg9, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -515,12 +522,12 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(btn_reg11, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
                 .addComponent(btn_reg10, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(165, 165, 165))
+                .addContainerGap(198, Short.MAX_VALUE))
         );
 
-        tabs.addTab("tab5", jPanel5);
+        tabs.addTab("tab5", pannel_acc_type);
 
-        jPanel3.add(tabs, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 0, 500, 610));
+        jPanel3.add(tabs, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, -40, 500, 650));
         tabs.getAccessibleContext().setAccessibleName("");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -579,13 +586,10 @@ public class Login extends javax.swing.JFrame {
                 psmt.setString(2,pw);
                 psmt.executeUpdate();
                 
-                //kalhara
-                psmt = Con.prepareStatement("Create Table `" +name+ "`(name varchar(20) PRIMARY KEY,password text,cardName text,cardNumber int,cvc int); ");
-                psmt.executeUpdate();
-                System.out.println("done test 1");
                 
                 
-                psmt = Con.prepareStatement("Insert into `" +name+"`(name,password)values(?,?)");
+                
+                psmt = Con.prepareStatement("Insert into personal(name,password)values(?,?)");
                 psmt.setString(1, name);
                 psmt.setString(2,pw);
                 psmt.executeUpdate();
@@ -596,7 +600,7 @@ public class Login extends javax.swing.JFrame {
                 
                 
                 JOptionPane.showMessageDialog(null, "Registed Success!", "Info", JOptionPane.INFORMATION_MESSAGE);
-                
+                tabs.setSelectedIndex(0);
                } catch (SQLException ex) {
                 
                    JOptionPane.showMessageDialog(rootPane, ex);
@@ -635,10 +639,18 @@ public class Login extends javax.swing.JFrame {
              psmt.setString(2, com_pw);
              psmt.executeUpdate();
              
+             psmt=Con.prepareStatement("CREATE table `"+com_name+"`(com_name varchar(20) PRIMARY KEY,service text,price double);");
+             psmt.executeUpdate();
+             
             JOptionPane.showMessageDialog(rootPane, "Registration succsess!");
+            txt_com_name.setText(null);
+            txt_com_pw.setText(null);
+            txt_com_pw_con.setText(null);
+            
         }catch(Exception e)
         {
            JOptionPane.showMessageDialog(rootPane, e);
+            System.out.println(e);
         }
         }else{
                 JOptionPane.showMessageDialog(rootPane, "passwods not match!");
@@ -669,6 +681,7 @@ public class Login extends javax.swing.JFrame {
         
         String name = txt_user_name.getText();
         String pw = txt_pw_login.getText();
+        
         
         
         if(name.isEmpty()||pw.isEmpty()){
@@ -703,7 +716,7 @@ public class Login extends javax.swing.JFrame {
            psmt.setString(1,name);
            psmt.setString(2, pw);
            psmt.executeQuery();
-           JOptionPane.showMessageDialog(rootPane, "Success!");
+           
            
            ResultSet rs = psmt.executeQuery();
            
@@ -721,11 +734,12 @@ public class Login extends javax.swing.JFrame {
         }catch(Exception e)
         {
             JOptionPane.showMessageDialog(rootPane, e);
+            System.out.println(e);
         }
     }//GEN-LAST:event_btn_reg12ActionPerformed
 
     private void btn_reg13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_reg13ActionPerformed
-        // TODO add your handling code here:
+        tabs.setSelectedIndex(0);
     }//GEN-LAST:event_btn_reg13ActionPerformed
 
     /**
@@ -788,12 +802,12 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel panel_login;
+    private javax.swing.JPanel pannel_acc_type;
     private javax.swing.JPanel pnl_register;
     private javax.swing.JPanel pnl_start;
     private toggle.ToggleButton service_provider_tgl;
