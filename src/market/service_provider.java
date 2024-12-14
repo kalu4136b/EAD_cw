@@ -45,17 +45,6 @@ public class service_provider extends javax.swing.JFrame {
         kGradientPanel2 = new com.k33ptoo.components.KGradientPanel();
         txt_welcome = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        services = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        cmb_service = new javax.swing.JComboBox<>();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        txt_price = new javax.swing.JTextField();
-        btn_reg8 = new com.k33ptoo.components.KButton();
-        txt_comName = new javax.swing.JTextField();
-        txt_comPac = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
         settings = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -71,6 +60,17 @@ public class service_provider extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         txt_UCuser2 = new javax.swing.JTextField();
         btn_reg10 = new com.k33ptoo.components.KButton();
+        services = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        cmb_service = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        txt_price = new javax.swing.JTextField();
+        btn_reg8 = new com.k33ptoo.components.KButton();
+        txt_comName = new javax.swing.JTextField();
+        txt_comPac = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -213,7 +213,7 @@ public class service_provider extends javax.swing.JFrame {
             .addGroup(kGradientPanel2Layout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addComponent(txt_welcome, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(601, Short.MAX_VALUE))
+                .addContainerGap(438, Short.MAX_VALUE))
         );
         kGradientPanel2Layout.setVerticalGroup(
             kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -248,7 +248,7 @@ public class service_provider extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 917, Short.MAX_VALUE)
+            .addGap(0, 754, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -256,100 +256,6 @@ public class service_provider extends javax.swing.JFrame {
         );
 
         tbp_cus.addTab("", jPanel3);
-
-        services.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel2.setText("Select Service Type");
-
-        cmb_service.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Television ", "Telecommunication ", " ", " " }));
-
-        jLabel6.setText("Enter Company Name to Display User ");
-
-        jLabel17.setText("Service name");
-
-        jLabel18.setText("price");
-
-        txt_price.setText("0.00");
-        txt_price.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_priceActionPerformed(evt);
-            }
-        });
-
-        btn_reg8.setText("Add");
-        btn_reg8.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
-        btn_reg8.setIconTextGap(40);
-        btn_reg8.setkBackGroundColor(new java.awt.Color(0, 204, 204));
-        btn_reg8.setkEndColor(new java.awt.Color(0, 153, 204));
-        btn_reg8.setkHoverEndColor(new java.awt.Color(0, 153, 153));
-        btn_reg8.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        btn_reg8.setkHoverStartColor(new java.awt.Color(0, 204, 255));
-        btn_reg8.setkPressedColor(new java.awt.Color(0, 153, 204));
-        btn_reg8.setkSelectedColor(new java.awt.Color(0, 153, 153));
-        btn_reg8.setkStartColor(new java.awt.Color(0, 153, 204));
-        btn_reg8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_reg8ActionPerformed(evt);
-            }
-        });
-
-        txt_comName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_comNameActionPerformed(evt);
-            }
-        });
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel7.setText("Add Services");
-
-        javax.swing.GroupLayout servicesLayout = new javax.swing.GroupLayout(services);
-        services.setLayout(servicesLayout);
-        servicesLayout.setHorizontalGroup(
-            servicesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(servicesLayout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addGroup(servicesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(servicesLayout.createSequentialGroup()
-                        .addComponent(txt_price, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(116, 116, 116)
-                        .addComponent(btn_reg8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmb_service, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txt_comName, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
-                    .addComponent(txt_comPac, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(235, Short.MAX_VALUE))
-        );
-        servicesLayout.setVerticalGroup(
-            servicesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(servicesLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(jLabel7)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_comName, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cmb_service, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(jLabel17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_comPac, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(servicesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_price, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btn_reg8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(158, Short.MAX_VALUE))
-        );
-
-        tbp_cus.addTab("", services);
 
         settings.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -428,7 +334,7 @@ public class service_provider extends javax.swing.JFrame {
                         .addGroup(settingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btn_reg10, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btn_reg9, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(287, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
         settingsLayout.setVerticalGroup(
             settingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -465,6 +371,101 @@ public class service_provider extends javax.swing.JFrame {
         );
 
         tbp_cus.addTab("", settings);
+
+        services.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel2.setText("Select Service Type");
+
+        cmb_service.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Television ", "Telecommunication ", " ", " " }));
+
+        jLabel6.setText("Enter Company Name to Display User ");
+
+        jLabel17.setText("Service name");
+
+        jLabel18.setText("price");
+
+        txt_price.setText("0.00");
+        txt_price.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_priceActionPerformed(evt);
+            }
+        });
+
+        btn_reg8.setText("Add");
+        btn_reg8.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        btn_reg8.setIconTextGap(40);
+        btn_reg8.setkBackGroundColor(new java.awt.Color(0, 204, 204));
+        btn_reg8.setkEndColor(new java.awt.Color(0, 153, 204));
+        btn_reg8.setkHoverEndColor(new java.awt.Color(0, 153, 153));
+        btn_reg8.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        btn_reg8.setkHoverStartColor(new java.awt.Color(0, 204, 255));
+        btn_reg8.setkPressedColor(new java.awt.Color(0, 153, 204));
+        btn_reg8.setkSelectedColor(new java.awt.Color(0, 153, 153));
+        btn_reg8.setkStartColor(new java.awt.Color(0, 153, 204));
+        btn_reg8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_reg8ActionPerformed(evt);
+            }
+        });
+
+        txt_comName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_comNameActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel7.setText("Add Services");
+
+        javax.swing.GroupLayout servicesLayout = new javax.swing.GroupLayout(services);
+        services.setLayout(servicesLayout);
+        servicesLayout.setHorizontalGroup(
+            servicesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(servicesLayout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addGroup(servicesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cmb_service, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_comName, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(servicesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, servicesLayout.createSequentialGroup()
+                            .addComponent(txt_price, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_reg8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt_comPac, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 532, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(72, Short.MAX_VALUE))
+        );
+        servicesLayout.setVerticalGroup(
+            servicesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(servicesLayout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addComponent(jLabel7)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_comName, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cmb_service, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
+                .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_comPac, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(servicesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_price, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_reg8, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(158, Short.MAX_VALUE))
+        );
+
+        tbp_cus.addTab("", services);
 
         getContentPane().add(tbp_cus, java.awt.BorderLayout.CENTER);
 
