@@ -345,7 +345,7 @@ public class Customer extends javax.swing.JFrame {
             }
         });
 
-        jLabel14.setText("price");
+        jLabel14.setText("Price");
 
         javax.swing.GroupLayout servicesLayout = new javax.swing.GroupLayout(services);
         services.setLayout(servicesLayout);
