@@ -10,6 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.*;
+import java.awt.event.*;
 
 
 
@@ -66,6 +67,7 @@ public class Login extends javax.swing.JFrame {
         btn_reg3 = new com.k33ptoo.components.KButton();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
+        close_button = new javax.swing.JLabel();
         pnl_register = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         txt_pw_con = new javax.swing.JPasswordField();
@@ -155,7 +157,7 @@ public class Login extends javax.swing.JFrame {
                 btn_reg2ActionPerformed(evt);
             }
         });
-        pnl_start.add(btn_reg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 240, 321, -1));
+        pnl_start.add(btn_reg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 321, -1));
 
         btn_reg3.setText("Login");
         btn_reg3.setkBackGroundColor(new java.awt.Color(0, 204, 204));
@@ -173,11 +175,29 @@ public class Login extends javax.swing.JFrame {
         });
         pnl_start.add(btn_reg3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, 321, -1));
 
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel12.setText("Already have an account!");
-        pnl_start.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 140, -1));
+        pnl_start.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 190, -1));
 
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel13.setText("New to the App! Click Register to create new account");
-        pnl_start.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, -1, -1));
+        pnl_start.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, -1, -1));
+
+        close_button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/market/icons8-close-48.png"))); // NOI18N
+        close_button.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                close_buttonMouseMoved(evt);
+            }
+        });
+        close_button.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                close_buttonMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                close_buttonMouseEntered(evt);
+            }
+        });
+        pnl_start.add(close_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 10, -1, -1));
 
         tabs.addTab("tab1", pnl_start);
 
@@ -221,6 +241,11 @@ public class Login extends javax.swing.JFrame {
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/market/icons8-close-48.png"))); // NOI18N
         jLabel8.setText("jLabel8");
+        jLabel8.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jLabel8MouseMoved(evt);
+            }
+        });
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel8MouseClicked(evt);
@@ -489,6 +514,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel11.setText("Select Account type to register");
 
         btn_reg11.setText("As a Customer");
@@ -511,33 +537,34 @@ public class Login extends javax.swing.JFrame {
         pannel_acc_typeLayout.setHorizontalGroup(
             pannel_acc_typeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pannel_acc_typeLayout.createSequentialGroup()
-                .addGap(105, 105, 105)
                 .addGroup(pannel_acc_typeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pannel_acc_typeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(btn_reg11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_reg9, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pannel_acc_typeLayout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pannel_acc_typeLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btn_reg10, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(31, 31, 31)))
+                        .addGap(31, 31, 31))
+                    .addGroup(pannel_acc_typeLayout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addGroup(pannel_acc_typeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_reg11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btn_reg9, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(88, 88, 88))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pannel_acc_typeLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(131, 131, 131))
         );
         pannel_acc_typeLayout.setVerticalGroup(
             pannel_acc_typeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pannel_acc_typeLayout.createSequentialGroup()
-                .addGap(190, 190, 190)
+                .addGap(189, 189, 189)
                 .addComponent(jLabel11)
-                .addGap(29, 29, 29)
+                .addGap(30, 30, 30)
                 .addComponent(btn_reg9, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addComponent(btn_reg11, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
                 .addComponent(btn_reg10, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addContainerGap(194, Short.MAX_VALUE))
         );
 
         tabs.addTab("tab5", pannel_acc_type);
@@ -761,6 +788,22 @@ public class Login extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_jLabel8MouseClicked
 
+    private void jLabel8MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseMoved
+       
+    }//GEN-LAST:event_jLabel8MouseMoved
+
+    private void close_buttonMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_close_buttonMouseMoved
+       close_button.setSize(49,49);
+    }//GEN-LAST:event_close_buttonMouseMoved
+
+    private void close_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_close_buttonMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_close_buttonMouseClicked
+
+    private void close_buttonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_close_buttonMouseEntered
+       close_button.setSize(49, 49);
+    }//GEN-LAST:event_close_buttonMouseEntered
+
     /**
      * @param args the command line arguments
      */
@@ -808,6 +851,7 @@ public class Login extends javax.swing.JFrame {
     private com.k33ptoo.components.KButton btn_reg9;
     private com.k33ptoo.components.KButton btn_reg_com;
     private com.k33ptoo.components.KButton btn_reg_cus;
+    private javax.swing.JLabel close_button;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

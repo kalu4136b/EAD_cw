@@ -387,6 +387,11 @@ public class service_provider extends javax.swing.JFrame {
         jLabel2.setText("Select Service Type");
 
         cmb_service.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Television ", "Telecommunication ", " ", " " }));
+        cmb_service.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmb_serviceActionPerformed(evt);
+            }
+        });
 
         jLabel6.setText("Enter Company Name to Display User ");
 
@@ -555,6 +560,10 @@ public class service_provider extends javax.swing.JFrame {
     private void txt_comNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_comNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_comNameActionPerformed
+
+    private void cmb_serviceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmb_serviceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmb_serviceActionPerformed
 
     /**
      * @param args the command line arguments
