@@ -73,7 +73,7 @@
       <SubComponents>
         <Component class="com.k33ptoo.components.KButton" name="btn_reg4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Add Service"/>
+            <Property name="text" type="java.lang.String" value="Setings"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="15" style="0"/>
             </Property>
@@ -109,7 +109,7 @@
         </Component>
         <Component class="com.k33ptoo.components.KButton" name="btn_reg5">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Settings"/>
+            <Property name="text" type="java.lang.String" value="Services"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI" size="15" style="0"/>
             </Property>

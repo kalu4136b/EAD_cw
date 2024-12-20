@@ -80,7 +80,7 @@ public class service_provider extends javax.swing.JFrame {
         kGradientPanel1.setkGradientFocus(300);
         kGradientPanel1.setkStartColor(new java.awt.Color(0, 153, 204));
 
-        btn_reg4.setText("Add Service");
+        btn_reg4.setText("Setings");
         btn_reg4.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         btn_reg4.setIconTextGap(40);
         btn_reg4.setkBackGroundColor(new java.awt.Color(0, 204, 204));
@@ -97,7 +97,7 @@ public class service_provider extends javax.swing.JFrame {
             }
         });
 
-        btn_reg5.setText("Settings");
+        btn_reg5.setText("Services");
         btn_reg5.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
         btn_reg5.setIconTextGap(40);
         btn_reg5.setkBackGroundColor(new java.awt.Color(0, 204, 204));
